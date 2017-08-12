@@ -21,7 +21,7 @@ Required fields:
   - Twitter (your avatar will appear on the pass)
 
 Optional fields:
-- Title
+  - Title
   - Email
   - Website
   - GitHub
