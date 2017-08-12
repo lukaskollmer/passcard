@@ -1,0 +1,19 @@
+{
+  "name": "passcard",
+  "version": "1.0.0",
+  "description": "Create a Passbook/Wallet Business Card",
+  "main": "index.js",
+  "repository": "https://github.com/lukaskollmer/passcard",
+  "author": "Lukas Kollmer <lukas.kollmer@gmail.com>",
+  "license": "MIT",
+  "bin": "index.js",
+  "preferGlobal": true,
+  "dependencies": {
+    "execa": "^0.8.0",
+    "jimp": "^0.2.28",
+    "prompt": "^1.0.0",
+    "request": "^2.81.0",
+    "rimraf": "^2.6.1",
+    "uuid": "^3.1.0"
+  }
+}

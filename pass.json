@@ -1,0 +1,25 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.me.lukaskollmer.passcard",
+  "serialNumber" : "0",
+  "teamIdentifier" : "A485NLSB8K",
+  "barcodes" : [
+    {
+      "message" : "https://www.youtube.com/watch?v=DLzxrzFCyOs",
+      "format" : "PKBarcodeFormatQR",
+      "messageEncoding" : "utf-8",
+      "altText" : "https://www.youtube.com/watch?v=DLzxrzFCyOs"
+    }
+  ],
+  "organizationName" : "Lukas Kollmer",
+  "description" : "Name",
+  "logoText" : "Name",
+  "foregroundColor" : "rgb(9, 80, 160)",
+  "backgroundColor" : "rgb(255, 255, 255)",
+  "generic" : {
+    "primaryFields" : [],
+    "secondaryFields" : [],
+    "auxiliaryFields" : [],
+    "backFields" : []
+  }
+}
