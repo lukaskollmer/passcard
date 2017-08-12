@@ -1,6 +1,6 @@
 {
   "name": "passcard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a Passbook/Wallet Business Card",
   "main": "index.js",
   "repository": "https://github.com/lukaskollmer/passcard",
