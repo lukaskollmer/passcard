@@ -12,13 +12,10 @@ const jimp = require('jimp')
 
 const pass = require('./pass.json')
 
-if (process.argv.length < 4) {
-  console.log('Error: You need to pass your Developer Team ID and the pass type ID')
-  process.exit(1)
+if (process.argv.length == 4) {
+  pass['teamIdentifier'] = process.argv[2]
+  pass['passTypeIdentifier'] = process.argv[3]
 }
-
-pass['teamIdentifier'] = process.argv[2]
-pass['passTypeIdentifier'] = process.argv[3]
 
 console.log(
 `
