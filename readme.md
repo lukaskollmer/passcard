@@ -11,7 +11,7 @@
 $ npm install --global passcard
 ```
 
-Apple requires all passes to be signed, meaning that you'll prepare a couple of things in order for `passcard` to work:
+Apple requires all passes to be signed, so you'll nedd to prepare a couple of things in order for `passcard` to work:
 1) Register a custom [Pass Type ID](https://developer.apple.com/account/ios/identifier/passTypeId)
 2) Create a [Pass Signing Certificate](https://developer.apple.com/account/ios/certificate)
 
