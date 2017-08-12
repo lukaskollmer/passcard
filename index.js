@@ -75,7 +75,7 @@ prompt.get(fields, (err, result) => {
       label: key.toUpperCase(),
       value: result[key]
     }
-    for (d of dest) {
+    for (let d of dest) {
       d.push(field)
     }
   }
