@@ -18,19 +18,19 @@ if (process.argv.length == 4) {
 }
 
 console.log(
-`
-We'll ask you for some information about you. You can skip any entry simply by pressing enter.
+  `
+  We'll ask you for some information about you. You can skip any entry simply by pressing enter.
 
-Required fields:
+  Required fields:
   - Name
   - Twitter (your avatar will appear on the pass)
 
-Optional fields:
+  Optional fields:
   - Title
   - Email
   - Website
   - GitHub
-`
+  `
 )
 
 prompt.message = 'passcard'
@@ -50,9 +50,9 @@ let fields = [
 ]
 
 prompt.get(fields, (err, result) => {
-	let dir = path.join(process.cwd(), 'card.pass')
+  let dir = path.join(process.cwd(), 'card.pass')
   rimraf.sync(dir)
-	fs.mkdirSync(dir)
+  fs.mkdirSync(dir)
 
   const fieldExists = key => result[key] !== ''
 
@@ -115,34 +115,34 @@ prompt.get(fields, (err, result) => {
   let twitter = result['Twitter'].replace('@', '')
 
   let options = {
-  	url: `https://twitter.com/${twitter}/profile_image?size=original`,
-  	encoding: null // This forces a Buffer
+    url: `https://twitter.com/${twitter}/profile_image?size=original`,
+    encoding: null // This forces a Buffer
   }
 
   request(options, (err, res, body) => {
-  	(async () => {
-  		let avatar = await jimp.read(body)
+    (async () => {
+      let avatar = await jimp.read(body)
 
-  		avatar
-  			.write(path.join(dir, 'thumbnail@2x.png'))
-  			.scale(0.5)
-  			.write(path.join(dir, 'thumbnail.png'))
-  			.resize(58, 58)
-  			.write(path.join(dir, 'icon@2x.png'))
-  			.write(path.join(dir, 'logo@2x.png'))
-  			.resize(29, 29)
-  			.write(path.join(dir, 'icon.png'))
-  			.write(path.join(dir, 'logo.png'))
+      avatar
+        .write(path.join(dir, 'thumbnail@2x.png'))
+        .scale(0.5)
+        .write(path.join(dir, 'thumbnail.png'))
+        .resize(58, 58)
+        .write(path.join(dir, 'icon@2x.png'))
+        .write(path.join(dir, 'logo@2x.png'))
+        .resize(29, 29)
+        .write(path.join(dir, 'icon.png'))
+        .write(path.join(dir, 'logo.png'))
 
-  		fs.writeFileSync(path.join(dir, 'pass.json'), JSON.stringify(pass, null, 2) , 'utf-8')
+      fs.writeFileSync(path.join(dir, 'pass.json'), JSON.stringify(pass, null, 2) , 'utf-8')
 
-  		setTimeout(() => {
-  			(async () => {
-  				await execa(path.join(__dirname, 'signpass'), ['-p', dir])
-  				console.log(`\nDONE. Your pass is available at ${process.cwd()}/card.pkpass`)
-  				rimraf.sync(dir)
-  			})()
-			}, 500)
-  	})()
+      setTimeout(() => {
+        (async () => {
+          await execa(path.join(__dirname, 'signpass'), ['-p', dir])
+          console.log(`\nDONE. Your pass is available at ${process.cwd()}/card.pkpass`)
+          rimraf.sync(dir)
+        })()
+      }, 500) // wait 0.5 secs to make sure all images are saved
+    })()
   })
 })
