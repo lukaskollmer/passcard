@@ -133,7 +133,7 @@ prompt.get(fields, (err, result) => {
 
   		setTimeout(() => {
   			(async () => {
-  				await execa('./signpass', ['-p', dir])
+  				await execa(`${path.join(__dirname, 'signpass')}`, ['-p', dir])
   				console.log(`DONE. Your pass is available at ${dir}`)
   				rimraf.sync(dir)
   			})()
