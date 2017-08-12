@@ -45,7 +45,7 @@ let fields = [
 ]
 
 prompt.get(fields, (err, result) => {
-	let dir = path.join(__dirname, 'card.pass')
+	let dir = path.join(process.cwd(), 'card.pass')
   rimraf.sync(dir)
 	fs.mkdirSync(dir)
 
