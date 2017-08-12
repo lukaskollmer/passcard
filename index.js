@@ -134,7 +134,7 @@ prompt.get(fields, (err, result) => {
   		setTimeout(() => {
   			(async () => {
   				await execa(path.join(__dirname, 'signpass'), ['-p', dir])
-  				console.log(`\nDONE. Your pass is available at ${dir}`)
+  				console.log(`\nDONE. Your pass is available at ${process.cwd()}/card.pkpass`)
   				rimraf.sync(dir)
   			})()
 			}, 500)
