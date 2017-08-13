@@ -8,6 +8,9 @@
   "license": "MIT",
   "bin": "index.js",
   "preferGlobal": true,
+  "engines": {
+    "node": ">=7.6"
+  },
   "dependencies": {
     "execa": "^0.8.0",
     "jimp": "^0.2.28",
