@@ -1,6 +1,6 @@
 <img align="right" width="320" height="568" src="https://files.lukaskollmer.me/embed/passcard-example.png">
 
-# passcard [![npm](https://img.shields.io/npm/v/passcard.svg?style=flat-square)](https://www.npmjs.com/package/passcard)
+# passcard [![npm](https://img.shields.io/npm/v/passcard.svg?style=flat-square)](https://www.npmjs.com/package/passcard) [![node](https://img.shields.io/node/v/passcard.svg?style=flat-square)](https://www.npmjs.com/package/passcard)
 
 > Create a Passbook/Wallet Business Card
 
