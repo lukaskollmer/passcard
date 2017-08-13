@@ -65,7 +65,7 @@ prompt.get(fields, (err, result) => {
   pass['generic']['primaryFields'] = [{ key: "name", value: name }]
 
 
-  if (fieldExists('Title')) {
+  if (fieldExists('Twitter')) {
     pass['generic']['secondaryFields'] = [{ key: "title", label: "TWITTER", value: result['Twitter'] }]
   } else {
     delete pass['generic'].secondaryFields
